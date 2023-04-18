@@ -22,7 +22,7 @@ from packaging import version
 from transformers import CLIPImageProcessor, CLIPTextModel, CLIPTokenizer
 
 from ...configuration_utils import FrozenDict
-from ...loaders import TextualInversionLoaderMixin
+from ...loaders import LoraLoaderMixin, TextualInversionLoaderMixin
 from ...models import AutoencoderKL, UNet2DConditionModel
 from ...schedulers import KarrasDiffusionSchedulers
 from ...utils import deprecate, is_accelerate_available, is_accelerate_version, logging, randn_tensor
@@ -138,7 +138,7 @@ def prepare_mask_and_masked_image(image, mask):
     return mask, masked_image
 
 
-class StableDiffusionInpaintPipeline(DiffusionPipeline, TextualInversionLoaderMixin):
+class StableDiffusionInpaintPipeline(DiffusionPipeline, TextualInversionLoaderMixin, LoraLoaderMixin):
     r"""
     Pipeline for text-guided image inpainting using Stable Diffusion. *This is an experimental feature*.
 
