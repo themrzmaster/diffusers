@@ -24,7 +24,7 @@ from diffusers import AutoencoderKL, DDPMScheduler, StableDiffusionInpaintPipeli
 from diffusers.loaders import AttnProcsLayers, LoraLoaderMixin
 from diffusers.models.attention_processor import LoRAAttnProcessor
 from diffusers.optimization import get_scheduler
-from diffusers.utils import TEXT_ENCODER_TARGET_MODULES, heck_min_version
+from diffusers.utils import TEXT_ENCODER_TARGET_MODULES, check_min_version
 from diffusers.utils.import_utils import is_xformers_available
 
 
