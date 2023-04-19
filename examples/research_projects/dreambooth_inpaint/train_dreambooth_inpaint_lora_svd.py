@@ -47,6 +47,7 @@ from diffusers import (
     DPMSolverMultistepScheduler,
     UNet2DConditionModel,
 )
+from PIL import Image, ImageDraw
 from diffusers.optimization import get_scheduler
 from diffusers.utils import check_min_version, is_wandb_available
 from diffusers.utils.import_utils import is_xformers_available
