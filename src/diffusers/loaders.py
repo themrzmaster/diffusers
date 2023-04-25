@@ -40,11 +40,19 @@ if is_transformers_available():
 logger = logging.get_logger(__name__)
 
 
+
+TEXT_ENCODER_NAME = "text_encoder"
+UNET_NAME = "unet"
+
 LORA_WEIGHT_NAME = "pytorch_lora_weights.bin"
 LORA_WEIGHT_NAME_SAFE = "pytorch_lora_weights.safetensors"
 
 TEXT_INVERSION_NAME = "learned_embeds.bin"
 TEXT_INVERSION_NAME_SAFE = "learned_embeds.safetensors"
+
+CUSTOM_DIFFUSION_WEIGHT_NAME = "pytorch_custom_diffusion_weights.bin"
+CUSTOM_DIFFUSION_WEIGHT_NAME_SAFE = "pytorch_custom_diffusion_weights.safetensors"
+
 
 
 class AttnProcsLayers(torch.nn.Module):
